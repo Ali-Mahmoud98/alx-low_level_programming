@@ -46,6 +46,7 @@
 - Warnings are allowed
 - Your program should return 0
 - You might have to install the package libc6-dev-i386 on your Linux to test the -m32 gcc option
+- The -m32 and -m64 flags are used to specify the architecture of the target machine for 32-bit and 64-bit systems, respectively.
 
 ### Example
 ```
@@ -68,3 +69,5 @@ julien@ubuntu:~/c/0x00$ echo $?
 julien@ubuntu:~/c/0x00$ 
 
 ```
+
+
