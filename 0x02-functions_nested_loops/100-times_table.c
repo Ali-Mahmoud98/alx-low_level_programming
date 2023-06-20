@@ -17,7 +17,7 @@ void print_commaAndSpace(int a)
   */
 void print_times_table(int n)
 {
-	char i = 0;
+	char i = 0, j;
 
 	while ((n <= 15) && (i <= n) && (n >= 0))
 	{
