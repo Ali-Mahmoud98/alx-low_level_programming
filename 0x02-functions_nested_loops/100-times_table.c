@@ -1,50 +1,43 @@
 #include "main.h"
 /**
-  * times_table - prints the n times table, starting with 0.
+  * print_commaAndSpace - print
+  * @a: integer
+  */
+void print_commaAndSpace(int a)
+{
+	_putchar(',');
+	for (int i = 0; i < a; i++)
+		_putchar(' ');
+}
+/**
+  * print_times_table - prints the n times table, starting with 0.
   * @n: integer
   */
 void print_times_table(int n)
 {
-	char i = 0;
-
-	if (n >= 0 && n <= 15)
+	for (char i = 0; (n <= 15) && (i <= n) && (n >= 0); i++)
 	{
-		while (i <= n)
+		for (char j = 0; j <= n; j++)
 		{
-			char j = 0;
-
-			while (j <= n)
+			if (j == 0)
+				_putchar('0' + (i * j));
+			if ((j != 0) && ((i * j) <= 9))
 			{
-				if (j == 0)
-					_putchar('0' + (i * j));
-				if ((j != 0) && ((i * j) <= 9))
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + (i * j));
-				}
-				else if ((j != 0) && ((i * j) > 9) && ((i * j) < 100))
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + ((i * j) / 10));
-					_putchar('0' + ((i * j) % 10));
-				}
-				else if ((j != 0) && ((i * j) > 99))
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar('0' + ((i * j) / 100));
-					_putchar('0' + (((i * j) / 10) % 10));
-					_putchar('0' + ((i * j) % 10));
-				}
-				j++;
+				print_commaAndSpace(3);
+				_putchar('0' + (i * j));
+			} else if ((j != 0) && ((i * j) > 9) && ((i * j) < 100))
+			{
+				print_commaAndSpace(2);
+				_putchar('0' + ((i * j) / 10));
+				_putchar('0' + ((i * j) % 10));
+			} else if ((j != 0) && ((i * j) > 99))
+			{
+				print_commaAndSpace(1);
+				_putchar('0' + ((i * j) / 100));
+				_putchar('0' + (((i * j) / 10) % 10));
+				_putchar('0' + ((i * j) % 10));
 			}
-			_putchar('\n');
-			i++;
 		}
+		_putchar('\n');
 	}
 }
