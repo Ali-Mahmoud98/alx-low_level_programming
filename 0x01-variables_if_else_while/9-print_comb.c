@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
   * main - printing numbers 
-  * Hexadecimal from 0 to F
+  * Hexadecimal from 0 to 9
   * Return: return (0) means success
   */
 int main(void)
