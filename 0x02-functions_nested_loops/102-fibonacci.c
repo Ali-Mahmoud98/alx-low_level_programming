@@ -12,7 +12,7 @@ int main(void)
 
 	fibb[0] = 1;
 	fibb[1] = 2;
-	
+
 	while (a < 50)
 	{
 		fibb[a] = fibb[a - 1] + fibb[a - 2];
@@ -25,7 +25,7 @@ int main(void)
 	{
 		printf("%ld", fibb[a]);
 		if (a != (50 - 1))
-			printf(" ,");
+			printf(", ");
 		a++;
 	}
 	printf("\n");
