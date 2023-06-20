@@ -5,10 +5,10 @@
   */
 void print_commaAndSpace(int a)
 {
-	char i = 0;
+	char x = 0;
 
 	_putchar(',');
-	while (i < a)
+	while (x < a)
 		_putchar(' ');
 }
 /**
@@ -19,7 +19,7 @@ void print_times_table(int n)
 {
 	char i = 0, j;
 
-	while ((n <= 15) && (i <= n) && (n >= 0))
+	while ((i <= n) && (n <= 15) && (n >= 0))
 	{
 		j = 0;
 		while (j <= n)
