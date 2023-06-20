@@ -22,7 +22,7 @@ void print_times_table(int n)
 				_putchar(' ');
 				_putchar(' ');
 				_putchar('0' + (i * j));
-			} else if ((j != 0) && ((i * j) < 99) && ((i * j) > 9))
+			} else if ((j != 0) && ((i * j) <= 99) && ((i * j) > 9))
 			{
 				_putchar(',');
 				_putchar(' ');
