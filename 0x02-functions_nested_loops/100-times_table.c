@@ -17,10 +17,11 @@ void print_commaAndSpace(int a)
   */
 void print_times_table(int n)
 {
-	char i = 0, j = 0;
+	char i = 0;
 
 	while ((n <= 15) && (i <= n) && (n >= 0))
 	{
+		j = 0;
 		while (j <= n)
 		{
 			if (j == 0)
@@ -44,7 +45,6 @@ void print_times_table(int n)
 			j++;
 		}
 		_putchar('\n');
-		j = 0;
 		i++;
 	}
 }
