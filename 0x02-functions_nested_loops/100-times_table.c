@@ -5,8 +5,10 @@
   */
 void print_commaAndSpace(int a)
 {
+	char i = 0;
+
 	_putchar(',');
-	for (int i = 0; i < a; i++)
+	while (i < a)
 		_putchar(' ');
 }
 /**
@@ -15,9 +17,11 @@ void print_commaAndSpace(int a)
   */
 void print_times_table(int n)
 {
-	for (char i = 0; (n <= 15) && (i <= n) && (n >= 0); i++)
+	char i = 0, j = 0;
+
+	while ((n <= 15) && (i <= n) && (n >= 0))
 	{
-		for (char j = 0; j <= n; j++)
+		while (j <= n)
 		{
 			if (j == 0)
 				_putchar('0' + (i * j));
@@ -37,7 +41,10 @@ void print_times_table(int n)
 				_putchar('0' + (((i * j) / 10) % 10));
 				_putchar('0' + ((i * j) % 10));
 			}
+			j++;
 		}
 		_putchar('\n');
+		j = 0;
+		i++;
 	}
 }
