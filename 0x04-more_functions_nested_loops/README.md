@@ -26,13 +26,13 @@ All of the following files are programs written in C:
 | `100-prime_factor.c` | Finds and prints the largest prime factor of the number `612852475143` |
 | `101-print_number.c` | Prints an integer |
 
-## General
+## General Rules of task
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 - All your files should end with a new line
 - A `README.md` file, at the root of the folder of the project is mandatory
 - Code should use the Betty style. It will be checked using `betty-style.pl` and `betty-doc.pl`
-- You are not allowed to use global variables
+- not allowed to use global variables
 - No more than 5 functions per file
-- You are not allowed to use the standard library. Any use of functions like `printf`, `puts`, etc… is forbidden
+- Not allowed to use the standard library. Any use of functions like `printf`, `puts`, etc… is forbidden
 - Allowed to use `_putchar`
