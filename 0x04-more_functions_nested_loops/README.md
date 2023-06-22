@@ -3,9 +3,9 @@
 Project done during **Full Stack Software Engineering studies** at **ALX School**. It aims to learn about nested loops in **C language**.
 
 ## Technologies
-* C files are compiled using `gcc 4.8.4`
-* C files are written according to the C90 standard
-* Tested on Ubuntu 14.04 LTS
+* C files are compiled using `11.3.0`
+* C files are written according to the C89 standard
+* Tested on Ubuntu 20.04 LTS
 
 ## Files
 All of the following files are programs written in C:
@@ -25,3 +25,14 @@ All of the following files are programs written in C:
 | `10-print_triangle.c` | Prints a triangle |
 | `100-prime_factor.c` | Finds and prints the largest prime factor of the number `612852475143` |
 | `101-print_number.c` | Prints an integer |
+
+## General
+- Allowed editors: vi, vim, emacs
+- All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- All your files should end with a new line
+- A `README.md` file, at the root of the folder of the project is mandatory
+- Code should use the Betty style. It will be checked using `betty-style.pl` and `betty-doc.pl`
+- You are not allowed to use global variables
+- No more than 5 functions per file
+- You are not allowed to use the standard library. Any use of functions like `printf`, `puts`, etc… is forbidden
+- Allowed to use `_putchar`
