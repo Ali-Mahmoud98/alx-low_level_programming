@@ -19,4 +19,4 @@
 
 1- `gcc -Wall -pedantic -Werror -Wextra 101-keygen.c -o 101-keygen`.
 
-2- `./101-crackme "$(./101-keygen)"` or `./101-crackme "``./101-keygen`"`
+2- `./101-crackme "$(./101-keygen)"` or ``./101-crackme "`./101-keygen`"``
