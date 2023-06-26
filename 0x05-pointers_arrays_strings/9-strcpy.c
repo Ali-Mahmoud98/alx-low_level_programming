@@ -25,5 +25,4 @@ char *_strcpy(char *dest, char *src)
 	}
 	dest = dest - (len - 1);
 	return (dest);
-}
-		
+}		
