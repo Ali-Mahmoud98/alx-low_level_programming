@@ -4,6 +4,7 @@
   * _strncat - copy number of n letters from string to another
   * @dest: string
   * @src: string to be concatenated to dest
+  * @n: number of letters to be concatenated
   * Return: string dest+ n letters of src
   */
 char *_strncat(char *dest, char *src, int n)
