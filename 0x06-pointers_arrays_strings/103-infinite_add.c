@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * rev_string - reverse string
  * @str: string
@@ -12,7 +11,6 @@ void rev_string(char *str)
 
 	while (str[len] != '\0')
 		len++;
-
 	for (index = 0; index < len / 2; index++)
 	{
 		temp = str[index];
@@ -26,7 +24,7 @@ void rev_string(char *str)
  * @n2: text representation of 2nd number to add
  * @r: pointer to buffer
  * @size_r: buffer size
- * Return: pointer to calling function
+ * Return: string
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
@@ -37,13 +35,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		len1++;
 	while (*(n2 + len2) != '\0')
 		len2++;
-	
 	len1--;
 	len2--;
-
 	if (len1 >= size_r || len2 >= size_r)
 		return (0);
-
 	while (len2 >= 0 || len1 >= 0 || overflow == 1)
 	{
 		if (len1 < 0)
@@ -66,7 +61,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		len1--;
 		len2--;
 	}
-
 	if (digits == size_r)
 		return (0);
 	*(r + digits) = '\0';
