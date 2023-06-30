@@ -10,18 +10,22 @@
 char *rot13(char *s)
 {
 	int len = 0;
+	char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (s[len] != '\0')
 	{
-		if (s[len] >= 'A' && s[len] <= 'M')
-			s[len] += 13;
-		else if (s[len] >= 'N' && s[len] <= 'Z')
-			s[len] -= 13;
-		else if (s[len] >= 'a' && s[len] <= 'm')
-			s[len] += 13;
-		else if (s[len] >= 'n' && s[len] <= 'z')
-			s[len] -= 13;
+		int index = 0;
 
+		while (index < 52)
+		{
+			if (s[len] == input[index])
+			{
+				s[len] = output[index];
+				break;
+			}
+			index++;
+		}
 		len++;
 	}
 
