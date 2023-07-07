@@ -23,7 +23,7 @@ int _isdigit(char *str)
   * main - entry point
   * @argc: int
   * @argv: pointer to pointer to char
-  * Return 0 mean SUCCESS
+  * Return: 0 mean SUCCESS
   */
 int main(int argc, char *argv[])
 {
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
 		for (; i < argc; i++)
 		{
-			if(_isdigit(argv[i]) == 0)
+			if (_isdigit(argv[i]) == 0)
 			{
 				printf("Error\n");
 				return (1);
