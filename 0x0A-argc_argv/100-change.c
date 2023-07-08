@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		int num = atoi(argv[1]);
 		int numOfCoins = 0;
 
-		if (num < 0)
+		if (num <= 0)
 		{
 			printf("0\n");
 			return (0);
