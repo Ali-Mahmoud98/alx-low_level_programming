@@ -43,7 +43,12 @@ char **strtow(char *str)
 
 		arr[x] = (char *) malloc(sizeof(char));
 		if (arr[x] == NULL)
+		{
+			for (int j = 0; j < x; j++)
+				free(arr[j]);
+			free(arr);
 			return (NULL);
+		}
 		for (y = i; y <= len; y++)
 		{
 			if (str[y] != ' ' && str[y] != '\0')
