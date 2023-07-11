@@ -29,42 +29,38 @@ int count_word(char *s, int *i)
   */
 char **strtow(char *str)
 {
-	int len, x, y, i = 0, j;
+	int len, x, y, i = 0;
 	int words = count_word(str, &len);
 	char **arr = (char **) malloc(sizeof(char *) * (words + 1));
 
-	if (words == 0)
+	if (words == 0 || arr == NULL)
 		return (NULL);
-	if (arr == NULL)
-		return (NULL);
+
 	for (x = 0; x < words; x++)
 	{
 		int c = 0;
 
-		arr[x] = (char *) malloc(sizeof(char));
+		while (str[i] == ' ')
+			i++;
+		y = i;
+		while (str[y] != ' ' && str[y] != '\0')
+		{
+			c++;
+			y++;
+		}
+
+		arr[x] = (char *) malloc(sizeof(char) * (c + 1));
 		if (arr[x] == NULL)
 		{
-			for (j = 0; j < x; j++)
-				free(arr[j]);
+			while (x > 0)
+				free(arr[--x]);
 			free(arr);
 			return (NULL);
 		}
-		for (y = i; y <= len; y++)
-		{
-			if (str[y] != ' ' && str[y] != '\0')
-			{
-				arr[x][c] = str[y];
-				c++;
-				arr[x] = (char *) realloc(arr[x], (c + 1));
-				if (str[y + 1] == ' ' || str[y + 1] == '\0')
-				{
-					arr[x][c] = '\0';
-					i++;
-					break;
-				}
-			}
-			i++;
-		}
+
+		for (y = 0; y < c; y++)
+			arr[x][y] = str[i++];
+		arr[x][y] = '\0';
 	}
 	arr[words] = NULL;
 	return (arr);
