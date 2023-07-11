@@ -41,7 +41,7 @@ char **strtow(char *str)
 	{
 		int c = 0;
 
-		arr[x] = (char *) malloc(sizeof(char) + 1);
+		arr[x] = (char *) malloc(sizeof(char));
 		if (arr[x] == NULL)
 			return (NULL);
 		for (y = i; y <= len; y++)
