@@ -9,10 +9,10 @@
  */
 void free_grid(int **grid, int height)
 {
-	int x, y;
+	int rowNum;
 
-	for(x = 0; x < height; x++)
-		free(*(grid + i));
+	for(rowNum = 0; rowNum < height; x++)
+		free(*(grid + rowNum));
 
 	free(grid);
 }
