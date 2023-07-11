@@ -29,7 +29,7 @@ int count_word(char *s, int *i)
   */
 char **strtow(char *str)
 {
-	int len, x, y, i = 0;
+	int len, x, y, i = 0, j;
 	int words = count_word(str, &len);
 	char **arr = (char **) malloc(sizeof(char *) * (words + 1));
 
@@ -44,7 +44,7 @@ char **strtow(char *str)
 		arr[x] = (char *) malloc(sizeof(char));
 		if (arr[x] == NULL)
 		{
-			for (int j = 0; j < x; j++)
+			for (j = 0; j < x; j++)
 				free(arr[j]);
 			free(arr);
 			return (NULL);
