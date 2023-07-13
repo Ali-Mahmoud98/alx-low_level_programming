@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * _memset - function that fills a block of memory with a particular value
  * @s: pointer to the memory block to be filled
@@ -30,7 +31,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	ptr = malloc(size * nmemb);
 	if (ptr == NULL)
 		return (NULL);
-	
+
 	_memset(ptr, 0, nmemb * size);
 
 	return (ptr);
