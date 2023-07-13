@@ -8,13 +8,15 @@
   * @max: int
   * Return: pointer to array of integers or NULL if faild
   */
-
 int *array_range(int min, int max)
 {
+	if (min > max)
+		return (NULL);
+
 	int size = max - min + 1;
 	int *ptr = (int *) malloc(sizeof(int) * size);
 
-	if (ptr == NULL || min > max)
+	if (ptr == NULL)
 		return (NULL);
 	while (min <= max)
 		*ptr++ = min++;
