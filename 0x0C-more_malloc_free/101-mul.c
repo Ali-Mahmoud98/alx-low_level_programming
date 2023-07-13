@@ -49,7 +49,6 @@ int main(int argc, char *argv[])
 	len1 = _strlen(argv[1]);
 	len2 = _strlen(argv[2]);
 	total_len = len1 + len2 + 1;
-	printf("%d\n", total_len);
 	res = (int *) calloc(total_len, sizeof(int));
 	if (res == NULL)
 		return (1);
@@ -70,9 +69,9 @@ int main(int argc, char *argv[])
 	j = 0;
 	for (i = 0; i < total_len - 1; i++)
 	{
-		if (res[i])
+		if (res[i] != 0)
 			j = 1;
-		if (j)
+		if (j == 1)
 			_putchar(res[i] + '0');
 	}
 	if (!j)
