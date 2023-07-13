@@ -27,9 +27,9 @@ int _strlen(char *str)
 {
 	int len = 0;
 
-	while (str[len++] != '\0')
-	{}
-	return (len - 1);
+	while (str[len] != '\0')
+		len++;
+	return (len);
 }
 /**
  * main - multiplies two positive numbers
@@ -67,14 +67,15 @@ int main(int argc, char *argv[])
 		if (carry > 0)
 			res[i + j + 1] += carry;
 	}
+	j = 0;
 	for (i = 0; i < total_len - 1; i++)
 	{
-		if (res[i] != '\0')
+		if (res[i])
 			j = 1;
-		if (j == 1)
+		if (j)
 			_putchar(res[i] + '0');
 	}
-	if (j == 0)
+	if (!j)
 		_putchar('0');
 	_putchar('\n');
 	free(res);
