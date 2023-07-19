@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
   * main - program that prints the opcodes of its own main function
   *
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	ptr = (char *) main;
 	for (; i < bytes; i++)
-		printf("%02hhx ", arr[i]);
+		printf("%02hhx ", ptr[i]);
 
 	printf("\n");
 	return (0);
