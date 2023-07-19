@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#define NULL ((void *) 0)
 /**
   * print_name - function that prints name
   * @name: string name
