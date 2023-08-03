@@ -5,18 +5,18 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i, n = 0;
+	int i, x = 0;
 
 	for (i = 63; i >= 0; i--)
 	{
-		if ((n >> 1) & 1)
+		if ((n >> i) & 1)
 		{
 			_putchar('1');
-			n++;
+			x++;
 		}
-		else if (n != 0)
+		else if (x != 0)
 			_putchar('0');
 	}
-	if (n == 0)
+	if (x == 0)
 		_putchar('0');
 }
