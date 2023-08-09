@@ -52,6 +52,8 @@ int main(int argc, char *argv[])
 	free(buf);
 	close_fd(src);
 	close_fd(dest);
+
+	return (0);
 }
 /**
  * create_buf - allocate 1024 bytes for buffer
