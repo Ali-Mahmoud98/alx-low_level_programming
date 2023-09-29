@@ -1,8 +1,12 @@
 #include "main.h"
 
+#ifndef NULL
+#define NULL ((void *) 0)
+#endif
+
 /**
  * binary_to_uint - uppercase letters
- * @b: char to check
+ * @b: char to check.
  *
  * Return: converted number or 0
  */
