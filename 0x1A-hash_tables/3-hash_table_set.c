@@ -19,7 +19,7 @@ int hash_node_create(hash_node_t **node, const char *key, const char *value)
         free(*node);
         return(0);
     }
-    (*node)->value = strdup(key);
+    (*node)->value = strdup(value);
     if ((*node)->value)
     {
         free((*node)->key);
