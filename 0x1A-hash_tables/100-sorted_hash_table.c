@@ -49,7 +49,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	tmp = ht->shead;
+	tmp = ht->array[index];
 	while (tmp)
 	{
 		if (strcmp(tmp->key, key) == 0)
@@ -58,7 +58,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			tmp->value = value_copy;
 			return (1);
 		}
-		tmp = tmp->snext;
+		tmp = tmp->next;
 	}
 
 	new = malloc(sizeof(shash_node_t));
