@@ -16,7 +16,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 		return (NULL);
 
 	shash_table->array = malloc(sizeof(shash_node_t) * size);
-	if (shash_table->shead == NULL)
+	if (shash_table->array == NULL)
 	{
 		free(shash_table);
 		return (NULL);
@@ -181,7 +181,6 @@ void shash_table_print_rev(const shash_table_t *ht)
  */
 void shash_table_delete(shash_table_t *ht)
 {
-	shash_table_t *head = ht;
 	shash_node_t *node, *tmp;
 
 	if (ht == NULL)
@@ -197,6 +196,6 @@ void shash_table_delete(shash_table_t *ht)
 		node = tmp;
 	}
 
-	free(head->array);
-	free(head);
+	free(ht->array);
+	free(ht);
 }
